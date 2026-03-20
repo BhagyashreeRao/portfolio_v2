@@ -39,7 +39,7 @@ body {
 .cursor-dot {
   width: 8px; height: 8px; border-radius: 50%;
   background: var(--pop);
-  position: fixed; z-index: 9999;
+  position: fixed; left: 0; top: 0; z-index: 9999;
   pointer-events: none;
   transform: translate(-50%, -50%);
   transition: transform 0.1s;
@@ -481,7 +481,7 @@ footer span { color: var(--pop); }
     </div>
     <div class="hero-actions fade d5">
       <a href="#projects" class="btn-filled">see my work →</a>
-      <a href="Bhagyashree_Applied_AI_CV.pdf" class="btn-ghost" target="_blank">resume ↗</a>
+      <a href="Bhagyashree_Rao_CV.pdf" class="btn-ghost" target="_blank">resume ↗</a>
       <a href="#contact" class="btn-ghost">say hello</a>
     </div>
   </div>
@@ -753,7 +753,7 @@ footer span { color: var(--pop); }
     </p>
   </div>
   <div class="contact-links">
-    <a href="Bhagyashree_Applied_AI_CV.pdf" class="c-row" target="_blank">
+    <a href="Bhagyashree_Rao_CV.pdf" class="c-row" target="_blank">
       <div><div class="c-lbl">Resume</div><div class="c-val">Download CV</div></div>
       <span class="c-icon">↗</span>
     </a>
@@ -777,4 +777,18 @@ footer span { color: var(--pop); }
 </section>
 
 <footer>
-  <p>© 2026 <span>Bhagyashree Rao</span> — made with strong 
+  <p>© 2026 <span>Bhagyashree Rao</span> — made with strong coffee</p>
+</footer>
+
+<script>
+(function() {
+  const cursor = document.getElementById('cursor');
+  if (!cursor) return;
+  document.addEventListener('mousemove', function(e) {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+})();
+</script>
+</body>
+</html>
